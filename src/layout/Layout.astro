@@ -1,0 +1,37 @@
+---
+const { title } = Astro.props;
+
+const pgTitle = `${title ? `${title} -` : ""}Youth Finance USA`;
+
+import { SEO } from "astro-seo";
+import {Navbar} from "../components/Navbar.jsx";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pgTitle}</title>
+    <SEO
+      title={pgTitle}
+      description="Youth Finance USA offers free financial literacy classes to students."
+      openGraph={{
+        basic: {
+          title: pgTitle,
+          type: "website",
+          image: "/image.webp",
+        },
+      }}
+      extend={{
+        link: [{ rel: "icon", href: "/favicon.ico" }],
+      }}
+    />
+  </head>
+  <body>
+    <Navbar client:load />
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
