@@ -82,7 +82,7 @@ function FullSizeNavbar() {
 
     return (<header
         style={{paddingBottom: linkActive !== -1 ? "64px" : ""}}
-        className="group flex fixed w-full bg-white p-4 shadow-2xl transition-[padding] duration-300">
+        className="group flex sticky z-50 top-0 w-full bg-white p-4 shadow-2xl transition-[padding] duration-300">
         <div className="flex flex-1 justify-start items-center">
             <a className="font-paytone md:text-2xl lg:text-3xl" href="/">
                 {"Youth Finance USA".split("").map((c, i) => <span
@@ -107,7 +107,7 @@ function FullSizeNavbar() {
 function MobileNavbar() {
     const [display, setDisplay] = useState(false);
 
-    return (<header className="w-full fixed bg-white p-4 shadow-2xl">
+    return (<header className="w-full sticky z-50 top-0 bg-white p-4 shadow-2xl">
         <div className="flex justify-between">
             <a className="font-paytone text-2xl">YFUSA</a>
             <div className="flex flex-1"></div>
@@ -136,7 +136,7 @@ function MobileNavbar() {
 }
 
 function SkeletonLoadingNavbar() {
-    return (<div className="flex w-full bg-white p-4 shadow-2xl"></div>)
+    return (<div className="sticky top-0 z-50 w-full bg-white p-4 shadow-2xl"></div>)
 }
 
 export function Navbar() {
