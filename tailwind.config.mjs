@@ -5,21 +5,17 @@ export default {
         extend: {
             fontFamily: {
                 paytone: ["Paytone One", "sans-serif"],
-                forum: ["Forum", "sans-serif"]
+                forum: ["Forum", "sans-serif"],
+                inter: ["Inter Variable", "sans-serif"]
             },
             keyframes: {
-                "flashgreen": {
-                    "0%": {color: "black"},
-                    "50%, 100%": {color: "white"}
-                },
-                "flashyellow": {
-                    "0%": {color: "black"},
-                    "50%, 100%": {color: "white"}
+                strobe: {
+                    "0%, 100%": {color: "black"},
+                    "50%": {color: "rgb(239 68 68)"}
                 }
             },
             animation: {
-                "flash-green": "flashgreen 0.8s ease-in-out",
-                "flash-yellow": "flashyellow 0.8s ease-in-out"
+                strobe: "strobe 0.8s ease-in-out",
             }
         },
     },
